@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.idea
+
+# ignore build files (but don't ignore Webpack's config file).
+/*.js
+/*.js.map
+!/webpack.config.js

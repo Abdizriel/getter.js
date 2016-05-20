@@ -1,6 +1,6 @@
 {
   "name": "getter.js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The Promise based get object parameters for the modern browsers and node.",
   "format": "es6",
   "main": "index.js",

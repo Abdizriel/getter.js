@@ -42,11 +42,22 @@ let dataObj = {
 };
 dataObj = getter(dataObj);
 
-const testValue = await dataObj.getTest();
+const asyncTestValue = await dataObj.getTest();
+
+
+let config = {
+  async: false,
+  multiple: false
+};
+dataObj = getter(dataObj, config);
+const testValue = dataObj.get('test');
 
 ```
 
 ## API
 
-### getter(Object)
+### getter({Object} Object, {Object} [Config])
 Object - provided argument where you want to add get functions.
+Config - provided configuration object for additional options
+Config.async - default true - getter functions returns Promise
+Config.multiple - default true - if true you would add to object x getKey functions if false you would get only get('key') function
